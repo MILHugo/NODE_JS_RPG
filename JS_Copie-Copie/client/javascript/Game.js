@@ -141,7 +141,7 @@ function actualiseInventory() {
 
 
 function finDePartie() {
-    document.getElementById('body').innerHTML = "<div id='test' style='font-size : 16em;'><b>taperdu</b></div><button onclick ='location.href = \"../html_css/test.html\"'>Retry</button>";
+    document.getElementById('body').innerHTML = "<div id='test' style='font-size : 16em;'><b>taperdu</b></div><button onclick ='location.href = \"../html_css/test.html\"'>Retry</button><style>#test{user-select: none;}</style>";
 
 
 }
