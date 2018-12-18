@@ -11,6 +11,7 @@ function onLoad() {
     req.send(null);
 }
 
+
 function create() {
     var req = new XMLHttpRequest();
     req.onreadystatechange = function () {
@@ -57,12 +58,14 @@ function load() {
         if (req.readyState === 4 && req.status === 200) {
             joueur = JSON.parse(req.responseText).joueur;
             console.log('Load !\u{2198}\u{2714}');
+            if (joueur.hp < 0) document.getElementById('body').innerHTML += "<style>#direction button, #load button{cursor: not-allowed;pointer-events: none;opacity: 0.5;}</style>";
             actualiseALL();
         }
     };
     req.open("GET", "http://localhost:8080/load");
     req.send(null);
 }
+
 
 function moveTo(btn) {
     var req = new XMLHttpRequest();

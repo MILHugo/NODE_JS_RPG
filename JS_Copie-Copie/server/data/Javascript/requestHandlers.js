@@ -22,7 +22,7 @@ function create(response, request) {
 
 function save(response) {
 	console.log("Le gestionnaire 'save' est appelé.");
-	fs.writeFileSync("../JSON/data.json", '{' +
+	fs.writeFileSync("./data/JSON/data.json", '{' +
 		'"joueur":' + JSON.stringify(joueur) + ',' +
 		'"arme":' + JSON.stringify(arme) + ',' +
 		'"armure":' + JSON.stringify(armure) + '}',
@@ -34,7 +34,7 @@ function save(response) {
 
 function load(response) {
 	console.log("Le gestionnaire 'load' est appelé.");
-	var file = fs.readFileSync('../JSON/data.json', 'utf8');
+	var file = fs.readFileSync('./data/JSON/data.json', 'utf8');
 	response.write(file);
 	joueur.name = JSON.parse(file).joueur.name;
 	joueur.hp = JSON.parse(file).joueur.hp;
@@ -57,7 +57,6 @@ function moveTo(response, request) {
 	if (joueur.direction == "north") joueur.posY += 1;
 	if (joueur.direction == "south") joueur.posY -= 1;
 	response.write(joueur.evenement() + "$" + ((joueur.hp >= 0) ? "vivant" : "mort"));
-	console.log("dfghjklmlkjhgfdsdfghjklkjhgfds     "+this.hp);
 	response.end();
 }
 
