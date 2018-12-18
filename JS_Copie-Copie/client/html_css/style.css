@@ -1,0 +1,41 @@
+#history {
+    background-color: lightblue;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    height: 20em;
+    overflow-y: scroll;
+    border-radius: 1.5em;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+	background: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(20,50,0,0.2);
+    border-radius: 13em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(40,60,0);
+}
+
+
+table {
+    margin: 0 auto;
+}
+
+* {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
