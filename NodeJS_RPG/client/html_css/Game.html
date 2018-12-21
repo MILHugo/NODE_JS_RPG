@@ -1,0 +1,36 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<meta charset="UTF-8">
+<script src="../javascript/Game.js"></script>
+
+<body id='body' onload="onLoad()">
+  <input name="name" id="name" placeholder="Name" />
+  <input name="hp" id="hp" placeholder="HP" />
+  <input name="strength" id="strength" placeholder="strength" />
+  <input name="agility" id="agility" placeholder="agility" />
+  <input name="intelligence" id="intelligence" placeholder="intelligence" />
+  <button onclick="create()">Valider</button>
+  <br>
+  <div id="direction">
+    <button value="east" onclick="moveTo(this)">Go to East</button>
+    <button value="south" onclick="moveTo(this)">Go to South</button>
+    <button value="west" onclick="moveTo(this)">Go to West</button>
+    <button value="north" onclick="moveTo(this)">Go to North</button>
+  </div>
+  <br>
+  <span id="directionChoosed"></span>
+  <table id="tableValuePlayer"></table>
+  <br>
+  <b>Inventory</b>
+  <table id="tableValueInventory"></table>
+  <br>
+  <b>History</b>
+  <div id="history"></div>
+  <div id="load">
+    <button onclick="load()">Load</button>
+  </div>
+  <style id="styleBtn"></style>
+</body>
+
+</html>
